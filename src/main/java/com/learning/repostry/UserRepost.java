@@ -6,4 +6,6 @@ import com.learning.userEntity.Uentitys;
 
 public interface UserRepost extends CrudRepository<Uentitys, Integer> {
 
+//	Uentitys saveAll(Uentitys uentitys, Uentitys uentitys3);
+
 }
