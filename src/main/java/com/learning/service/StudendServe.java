@@ -13,19 +13,19 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @Service
 public class StudendServe {
-	
-	
-	public  StudentRepsitry studentRepsitry;
-	
+
+	public StudentRepsitry studentRepsitry;
+
 	@Transactional
 	public StudendDto addStudendDto(StudendDto model) {
-		StudendDto dto=new StudendDto();
+		StudendDto dto = new StudendDto();
 		dto.setStudent_Fname(model.getStudent_Fname());
 		dto.setStudent_Lname(model.getStudent_Lname());
 		dto.setStudent_Age(model.getStudent_Age());
 		dto.setStudentUsername(model.getStudentUsername());
 		dto.setStudentPassword(model.getStudentPassword());
+//		System.out.println("data added successflly====>>");
 		return studentRepsitry.save(dto);
 	}
-	
+
 }

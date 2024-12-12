@@ -3,6 +3,7 @@ package com.learning.dto;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,8 +21,10 @@ import lombok.ToString;
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class StudendDto {
 	
+	
+
 	@Id
-	@GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="STUDENT_Id")
 	private int id;
 	
